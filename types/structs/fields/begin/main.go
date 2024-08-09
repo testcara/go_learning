@@ -9,10 +9,15 @@ type author struct {
 	last  string
 }
 
+func (a author) fullName() string {
+	return a.first + " " + a.last
+}
+
 func main() {
 	a := author{
 		first: "Cara",
 		last:  "Wang",
 	}
 	fmt.Printf("%#v\n", a)
+	fmt.Println(a.fullName())
 }
